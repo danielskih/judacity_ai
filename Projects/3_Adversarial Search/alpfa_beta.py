@@ -20,7 +20,6 @@ def alpha_beta_search(gameState):
     return best_move
 
 
-# TODO: modify the function signature to accept an alpha and beta parameter
 def min_value(gameState, alpha, beta):
     """ Return the value for a win (+1) if the game is over,
     otherwise return the minimum value over all legal child
@@ -31,16 +30,13 @@ def min_value(gameState, alpha, beta):
 
     v = float("inf")
     for a in gameState.actions():
-        # TODO: modify the call to max_value()
         v = min(v, max_value(gameState.result(a), alpha, beta))
-        # TODO: update the value bound
         if v <= alpha:
             return v
         beta = min(beta, v)
     return v
 
 
-# TODO: modify the function signature to accept an alpha and beta parameter
 def max_value(gameState, alpha, beta):
     """ Return the value for a loss (-1) if the game is over,
     otherwise return the maximum value over all legal child
@@ -51,9 +47,7 @@ def max_value(gameState, alpha, beta):
 
     v = float("-inf")
     for a in gameState.actions():
-        # TODO: modify the call to min_value()
         v = max(v, min_value(gameState.result(a), alpha, beta))
-        # TODO: update the value bound
         if v >= beta:
             return v
         alpha = max(alpha, v)

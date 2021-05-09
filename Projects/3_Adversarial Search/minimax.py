@@ -31,7 +31,7 @@ def min_value(gameState, depth):
     nodes.
     """
     if gameState.terminal_test():
-        return gameState.utility(0)
+        return gameState.utility(player_id)
 
     if depth <= 0:
         return my_moves(gameState)
@@ -49,7 +49,7 @@ def max_value(gameState, depth):
     nodes.
     """
     if gameState.terminal_test():
-        return gameState.utility(0)
+        return gameState.utility(player_id)
 
     if depth <= 0:
         return my_moves(gameState)
@@ -57,7 +57,7 @@ def max_value(gameState, depth):
     v = float("-inf")
     for a in gameState.actions():
         # the depth should be decremented by 1 on each call
-        v = max(v, min_value(gameState.result(a), depth - 5))
+        v = max(v, min_value(gameState.result(a), depth - 1))
     return v
 
 
