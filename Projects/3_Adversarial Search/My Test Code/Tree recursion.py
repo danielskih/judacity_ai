@@ -1,3 +1,6 @@
+import random
+
+print (random.randint(0,1))
 my_seq = [2, 1, 3, 2, 1, 3, 0, 7, 3, 5, 0, 1, 4, 2, 1, 0]
 # my_seq = [0, 7, 2, 1, 8, 0, 1, 3]
 
@@ -56,7 +59,7 @@ def is_leaf(node):
 # ind = max(shit, key=lambda x: x[pos])
 # bestMove= [tree[0], tree[1]][shit.index(ind)]
 
-for a in tree[0][0]:
+for a in tree:
     t = recurse(a)
     if t > bestValue:
         bestValue = t
