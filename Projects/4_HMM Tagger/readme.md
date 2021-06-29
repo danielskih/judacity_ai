@@ -37,7 +37,7 @@ Depending on your system settings, Jupyter will either open a browser window, or
 
 See below for project submission instructions.
 
-## Evaluation
+## Evaluation 
 
 Your project will be reviewed by a Udacity reviewer against the project rubric [here](https://review.udacity.com/#!/rubrics/1429/view). Review this rubric thoroughly, and self-evaluate your project before submission. All criteria found in the rubric must meet specifications for you to pass.
 

@@ -46,7 +46,7 @@ def make_fair_matches(matches, results):
     new_matches = []
     for _, game_history, match_id in results:
         if len(game_history) < 2:
-            logger.warn(textwrap.dedent("""\
+            logger.warning(textwrap.dedent("""\
                 Unable to duplicate match {}
                 -- one of the players forfeit at the first move
                 """.format(match_id)))
